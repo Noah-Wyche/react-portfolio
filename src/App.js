@@ -1,10 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Content from './components/Content';
+import Footer from './components/Footer';
 
 function App() {
+  const [activeSection, setActiveSection] = useState('about');
+
+  const handleNavClick = (section) => {
+    setActiveSection(section);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
+      <Header activeSection={activeSection} onNavClick={handleNavClick} />
+      <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +28,9 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </div>
+      <Content activeSection={activeSection} />
+      <Footer />
     </div>
   );
 }
