@@ -1,7 +1,13 @@
+header {
+    background-color: #d6e4ea;
+    padding: 20px
+}
+
 .Header {
     color: teal;
     display: flex;
     justify-content: space-between; /* Align items to the start and end of the container */
+    background-color: #d6e4ea;
 }
 
 .navBar {
