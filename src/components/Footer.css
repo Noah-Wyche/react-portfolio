@@ -1,0 +1,22 @@
+.Footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .Footer a {
+    display: inline-block;
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    margin: 0 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .Footer a:hover {
+    transform: scale(1.1); /* Enlarge the button on hover */
+  }
+  

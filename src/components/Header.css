@@ -1,0 +1,39 @@
+.Header {
+    color: teal;
+    display: flex;
+    justify-content: space-between; /* Align items to the start and end of the container */
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row-reverse; /* Align items in reverse order (from right to left) */
+}
+
+/* Remove default list styling */
+.navBar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style list items as buttons */
+.navBar li {
+    display: inline-block; /* Display list items inline */
+    margin-right: 10px; /* Add some space between buttons */
+}
+
+/* Style buttons */
+.navBar li button {
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove border */
+    color: teal; /* Text color */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 16px; /* Adjust font size */
+    padding: 5px 10px; /* Add padding */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Style active button */
+.navBar li.active button {
+    font-weight: bold; /* Make active button bold */
+}
