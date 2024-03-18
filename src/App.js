@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+// Import pages
+import AboutMe from './pages/AboutMe';
+import Contact from './pages/Contact';
+import Portfolio from './pages/Portfolio';
+import Resume from './pages/Resume';
 
 function App() {
+  // Set 'portfolio' as the default active section
+  const [activeSection, setActiveSection] = useState('portfolio'); // Changed the initial state to 'portfolio'
+
+  const handleNavClick = (section) => {
+    setActiveSection(section);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header activeSection={activeSection} onNavClick={handleNavClick} />
+     
+      {/* Render pages based on active section */}
+      {activeSection === 'about' && <AboutMe />}
+      {activeSection === 'portfolio' && <Portfolio />}
+      {activeSection === 'contact' && <Contact />}
+      {activeSection === 'resume' && <Resume />}
+      <Footer />
     </div>
   );
 }
