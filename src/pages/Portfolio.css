@@ -5,3 +5,20 @@
   .PortfolioContent {
     color: #004080; /* Darker blue text color */
   }
+
+  .ProjectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .ProjectBox {
+    width: 45%; /* Adjust the width as needed */
+    margin: 10px;
+  }
+  
+  .ProjectImage {
+    width: 100%;
+    height: auto;
+  }
+  
