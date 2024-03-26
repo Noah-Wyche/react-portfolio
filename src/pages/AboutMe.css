@@ -1,16 +1,37 @@
 body {
-    background-color: #add8e6; /* Light blue background */
+    background-color: #def6fe; /* Light blue background */
   }
   
   .about-me {
-    color: #ff6347; /* Red color */
+    color: #000000; /* Red color */
   }
   
   .about-me h1 {
-    color: #ff6347; /* Red color for heading */
+    color: #000000; /* Red color for heading */
+    padding-left: 30px;
   }
   
   .about-me p {
-    color: #ff6347; /* Red color for paragraph */
+    color: #000000; /* Red color for paragraph */
+  }
+  
+  .about-me {
+    display: flex; /* Use flexbox to align elements */
+  }
+  
+  .text-container {
+    flex: 2; /* Text container takes up 2/3 of the screen */
+    padding-right: 20px;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .image-container {
+    flex: .75; /* Image container takes up 1/3 of the screen */
+    padding: 40px;
+  }
+  
+  .portrait-image {
+    width: 100%; 
+    height: auto; /* Maintain the aspect ratio */
   }
   
