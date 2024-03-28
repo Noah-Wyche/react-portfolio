@@ -1,5 +1,5 @@
 body {
-    background-color: #def6fe; /* Light blue background */
+    background-color: #fff; /* Light blue background */
   }
   
   .about-me {
@@ -7,8 +7,7 @@ body {
   }
   
   .about-me h1 {
-    color: #000000; /* Red color for heading */
-    padding-left: 30px;
+    color: #9b8fd3; /* Red color for heading */
   }
   
   .about-me p {
@@ -17,17 +16,21 @@ body {
   
   .about-me {
     display: flex; /* Use flexbox to align elements */
+    align-self: left; /* Align elements to the left */
+    padding: 30px;
   }
   
   .text-container {
     flex: 2; /* Text container takes up 2/3 of the screen */
-    padding-right: 20px;
+    padding: 25px;
     text-align: left; /* Align text to the left */
   }
   
   .image-container {
-    flex: .75; /* Image container takes up 1/3 of the screen */
-    padding: 40px;
+    flex: 1.5; /* Image container takes up 1/3 of the screen */
+    padding: 100px 0; /* This applies 100px padding to the top and bottom, and 0 padding to the left and right */
+    display: flex;
+    justify-content: center; /* Center the image */
   }
   
   .portrait-image {
