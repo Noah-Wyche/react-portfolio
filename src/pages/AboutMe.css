@@ -1,40 +1,37 @@
-body {
-    background-color: #fff; /* Light blue background */
-  }
-  
+.about-me {
+  display: flex; /* Use flexbox to align elements */
+  padding: 30px;
+}
+
+.text-container {
+  flex: 2; /* Text container takes up 2/3 of the screen */
+  padding: 25px;
+  text-align: left; /* Align text to the left */
+}
+
+.image-container {
+  flex: 1.5; /* Image container takes up 1/3 of the screen */
+  padding: 0 20px; /* Add padding to the sides */
+  display: flex;
+  justify-content: center; /* Center the image */
+  align-items: center; /* Vertically center the image */
+}
+
+.portrait-image {
+  max-width: 100%; /* Set maximum width */
+  max-height: 100%; /* Set maximum height */
+  width: auto; /* Allow width to adjust based on height */
+  height: auto; /* Allow height to adjust based on width */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1024px) {
   .about-me {
-    color: #000000; /* Red color */
+    flex-direction: column; /* Stack elements vertically on smaller screens */
   }
-  
-  .about-me h1 {
-    color: #9b8fd3; /* Red color for heading */
-  }
-  
-  .about-me p {
-    color: #000000; /* Red color for paragraph */
-  }
-  
-  .about-me {
-    display: flex; /* Use flexbox to align elements */
-    align-self: left; /* Align elements to the left */
-    padding: 30px;
-  }
-  
-  .text-container {
-    flex: 2; /* Text container takes up 2/3 of the screen */
-    padding: 25px;
-    text-align: left; /* Align text to the left */
-  }
-  
+
   .image-container {
-    flex: 1.5; /* Image container takes up 1/3 of the screen */
-    padding: 100px 0; /* This applies 100px padding to the top and bottom, and 0 padding to the left and right */
-    display: flex;
-    justify-content: center; /* Center the image */
+    flex: 1; /* Image container takes up full width on smaller screens */
+    padding: 20px 0; /* Adjust padding */
   }
-  
-  .portrait-image {
-    width: 100%; 
-    height: auto; /* Maintain the aspect ratio */
-  }
-  
+}
