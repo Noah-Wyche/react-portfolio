@@ -5,3 +5,14 @@
   .ResumeContent {
     color: #228b22; /* Medium gray text color */
   }
+
+  .resume-image {
+    width: 50%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 1024px){
+    .resume-image {
+      width: 100%;
+    }
+  }
