@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 15%;
+  width: 32%;
 }
 
 label {
@@ -51,4 +51,14 @@ textarea {
 textarea {
   height: 200px; /* Set height for message box */
   width: 200%;
+}
+
+@media (max-width: 724px) {
+  .FormField {
+    width: 60%;
+  }
+
+  textarea {
+    width: 130%;
+  }
 }

@@ -9,18 +9,38 @@ const Contact = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+  
     // Validate email
     const isValidEmail = /\S+@\S+\.\S+/.test(email);
     if (!isValidEmail) {
       setErrorMessage('Invalid email address.');
       return;
     }
-    // Send email logic here
-    // For now, just log the form data
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
+  
+    try {
+      // Send email
+      await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+  
+      // Clear form fields after successful submission
+      setName('');
+      setEmail('');
+      setMessage('');
+      
+      // Optionally, display a success message to the user
+      alert('Your message has been sent successfully!');
+    } catch (error) {
+      // Handle any errors
+      console.error('Failed to send email:', error);
+      setErrorMessage('Failed to send email. Please try again later.');
+    }
   };
+  
 
   return (
     <div className="ContactContainer">

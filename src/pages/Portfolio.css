@@ -27,3 +27,14 @@
     height: auto;
   }
   
+  @media (max-width: 824px) {
+    .ProjectsContainer {
+      flex-direction: column; /* Display projects in a single column */
+      align-items: center; /* Center-align projects */
+    }
+  
+    .ProjectBox {
+      width: 95%; /* Adjust width to take up the entire width of the screen */
+    }
+  }
+  
