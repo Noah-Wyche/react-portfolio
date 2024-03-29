@@ -1,6 +1,6 @@
 import React from 'react';
 import './Resume.css';
-import Resumeimage from '../assets/Images/Resume.png'
+import Resumeimage from '../assets/Images/updatedResume.png'
 
 const Resume = () => {
   return (
