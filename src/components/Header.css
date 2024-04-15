@@ -1,13 +1,13 @@
 header {
-    background-color: #fcf4e9;
+    background-color: #d6e4ea;
     padding: 20px
 }
 
 .Header {
-    color: #8ca87c;
+    color: teal;
     display: flex;
     justify-content: space-between; /* Align items to the start and end of the container */
-    background-color: #fcf4e9;
+    background-color: #d6e4ea;
 }
 
 .navBar {
@@ -32,7 +32,7 @@ header {
 .navBar li button {
     background-color: transparent; /* Transparent background */
     border: none; /* Remove border */
-    color: #8ca87c; /* Text color */
+    color: teal; /* Text color */
     cursor: pointer; /* Show pointer cursor on hover */
     font-size: 16px; /* Adjust font size */
     padding: 5px 10px; /* Add padding */
@@ -43,31 +43,3 @@ header {
 .navBar li.active button {
     font-weight: bold; /* Make active button bold */
 }
-
-/* Media query for smaller screens */
-@media (max-width: 728px) {
-    header {
-      padding: 5px; /* Adjust padding to make the header thinner */
-    }
-  
-    .Header {
-      display: flex;
-      justify-content: center;
-      background-color: #d6e4ea;
-    }
-  
-    .navBar {
-      flex-direction: row; /* Keep buttons in a horizontal row */
-        justify-content: center; /* Center buttons */
-    }
-
-    .navBar li {
-      display: inline-block; /* Display list items inline */
-      margin-right: 10px; /* Add some space between buttons */
-    }
-  
-    .navBar li:last-child {
-      margin-right: 0; /* Remove margin from the last button */
-    }
-  }
-  
