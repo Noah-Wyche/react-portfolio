@@ -1,22 +1,27 @@
 .Footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #f8f9fa;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-evenly;
-  }
-  
-  .Footer a {
-    display: inline-block;
-    width: 40px; /* Adjust the width as needed */
-    height: 40px; /* Adjust the height as needed */
-    margin: 0 20px;
-    transition: all 0.3s ease;
-  }
-  
-  .Footer a:hover {
-    transform: scale(1.1); /* Enlarge the button on hover */
-  }
-  
+  position: fixed;
+  bottom: -60px; /* Initially hide the footer by moving it off-screen */
+  width: 100%;
+  background-color: #fcf4e9;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  transition: transform 0.5s ease, bottom 0.5s ease; /* Add 'bottom' property to the transition */
+}
+
+.Footer.show {
+  bottom: 0; /* Move the footer back to the bottom of the screen */
+  transform: translateY(0);
+}
+
+.Footer a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 20px;
+  transition: all 0.6s ease;
+}
+
+.Footer a:hover {
+  transform: scale(1.1);
+}

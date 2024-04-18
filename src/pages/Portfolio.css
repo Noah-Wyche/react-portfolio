@@ -1,3 +1,8 @@
+  body {
+    height: 100%;
+    padding-bottom: 100px;
+  }
+
 .PortfolioTitle {
     color: #0066cc; /* Blue text color */
   }
@@ -5,3 +10,31 @@
   .PortfolioContent {
     color: #004080; /* Darker blue text color */
   }
+
+  .ProjectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .ProjectBox {
+    width: 45%; /* Adjust the width as needed */
+    margin: 10px;
+  }
+  
+  .ProjectImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 824px) {
+    .ProjectsContainer {
+      flex-direction: column; /* Display projects in a single column */
+      align-items: center; /* Center-align projects */
+    }
+  
+    .ProjectBox {
+      width: 95%; /* Adjust width to take up the entire width of the screen */
+    }
+  }
+  
