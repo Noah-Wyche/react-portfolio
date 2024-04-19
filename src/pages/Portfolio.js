@@ -34,7 +34,7 @@ const Portfolio = () => {
       <div className="ProjectsContainer">
         {projects.map((project) => (
           <div key={project.id} className="ProjectBox">
-            <h3>{project.title}</h3> {/* Move the title above the link */}
+            <h3 className="ProjectTitle">{project.title}</h3> {/* Move the title above the link */}
             <a href={project.link} target="_blank" rel="noopener noreferrer">
               <img src={project.image} alt={project.title} className="ProjectImage" />
             </a>

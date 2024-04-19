@@ -33,7 +33,7 @@ const Footer = () => {
     <footer className={`Footer ${showFooter ? 'show' : ''}`}>
       <div>
         <a href="https://github.com/Noah-Wyche">GitHub</a>
-        <a href="https://www.linkedin.com/in/noah-fleetwood-3476a4195/">LinkedIn</a>
+        <a href="https://linkedin.com/in/noah-fleetwood-3476a4195">LinkedIn</a>
       </div>
     </footer>
   );
