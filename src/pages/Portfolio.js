@@ -1,9 +1,9 @@
 import React from 'react';
 import './Portfolio.css';
 
-import legoLabImage from '../assets/Images/LegoLab.jpg';
-import savorOfTheDayImage from '../assets/Images/SavorOfTheDay.jpg';
-import weatherDashboardImage from '../assets/Images/WeatherDashboard.jpg';
+import legoLabImage from '../assets/Images/legoLab.png';
+import savorOfTheDayImage from '../assets/Images/savorOfTheDay.png';
+import weatherDashboardImage from '../assets/Images/weatherDashboard.png';
 
 const Portfolio = () => {
   // Project data
