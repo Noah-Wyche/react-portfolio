@@ -6,6 +6,12 @@
   color: #990000; /* Darker red text color */
 }
 
+.SillyAnswer {
+  color: #cc3333; /* Dark red text color */
+  padding: 10px 200px;
+
+}
+
 .ContactForm {
   display: flex;
   flex-direction: column;
