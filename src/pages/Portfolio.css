@@ -1,75 +1,161 @@
-  body {
-    height: 100%;
-    padding-bottom: 100px;
-  }
+/* Base styles */
+body {
+  height: 100%;
+  padding-bottom: 100px;
+}
 
 .PortfolioTitle {
-    color: #0066cc; /* Blue text color */
-  }
-  
-  .PortfolioContent {
-    color: #004080; /* Darker blue text color */
-  }
+  color: #0066cc; /* Blue text color */
+}
 
-  .ProjectsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+.PortfolioContent {
+  color: #004080; /* Darker blue text color */
+}
+
+/* Projects container */
+.ProjectsContainer {
+  display: flex;
+  flex-direction: column; /* Ensure projects are displayed in a single column */
+  gap: 20px; /* Adjust the gap between project boxes */
+  align-items: center; /* Center projects horizontally */
+  padding: 20px; /* Add padding around the projects */
+}
+
+/* Individual project box */
+.ProjectBox {
+  position: relative;
+  width: 48%; /* Make project boxes take up full width */
+  transition: transform 0.5s ease; /* Smooth transition for project box movement */
+}
+
+.ProjectBoxClicked {
+  transform: translateX(-50%); /* Move the clicked project box to the left */
+}
+
+/* Project image */
+.ProjectImage {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for project image */
+}
+
+/* Project title */
+.ProjectTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  opacity: 0;
+  transition: opacity 0.5s ease, background-color 0.5s ease;
+  font-size: 32px;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #004080;
+  z-index: 1;
+}
+
+/* "More info" button */
+.InfoButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Smooth transition for more info button visibility */
+}
+
+/* Hide the "More Info" button when it's clicked */
+.InfoButtonClicked .CloseButton {
+  display: none;
+}
+
+/* Info box */
+.InfoBox {
+  position: absolute;
+  top: 50%; /* Position the top of the box at 50% of the parent */
+  left: calc(100% + 70px); /* Position info box to the right of the project box */
+  width: calc(100% - 100px); /* Take up 45% of the available space */
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  z-index: 1;
+  opacity: 0;
+  transition: left 0.5s ease, opacity 0.5s ease; /* Smooth transition for info box visibility */
+  transform: translateY(-50%); /* Adjust the position vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+/* Close button */
+.CloseButton {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Smooth transition for close button visibility */
+  width: 30px;
+  height: 30px;
+}
+
+/* Show/hide animations */
+.visible {
+  opacity: 1;
+}
+
+/* Project image hover effects */
+.ProjectBox:hover .ProjectImage {
+  filter: grayscale(100%);
+  opacity: 0.4;
+  transform: scale(1.1);
+}
+
+/* Smooth transition for image and title when hovering ends */
+.ProjectBox:hover .ProjectImage,
+.ProjectBox .ProjectTitle {
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for image and title */
+}
+
+/* Project title visibility on hover */
+.ProjectBox:hover .ProjectTitle,
+.ProjectBox:hover .InfoButton,
+.ProjectBox:hover .CloseButton {
+  opacity: 1;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 824px) {
   .ProjectBox {
-    position: relative; /* Position relative for absolute positioning of title */
-    width: 45%; /* Adjust the width as needed */
-    margin: 10px; /* Add margin between projects */
-    
+    width: 90%;
   }
-  
-  .ProjectImage {
+
+  .InfoBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 100%;
-    height: auto;
+    padding: 0px;
+    border-radius: 5px;
   }
 
-  .ProjectImage:hover {
-    opacity: 0.4; /* Reduce opacity when hovering over the image */
-    filter: grayscale(100%);
-    transform: scale(1.1);
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Add opacity transition */
+  .InfoButton {
+    right: 10px;
+    width: 50px;
+    height: 50px;
   }
-  
-  .ProjectTitle {
-    position: absolute; /* Position absolute to overlay on top of the image */
-    top: 50%; /* Position title vertically centered */
-    left: 50%; /* Position title horizontally centered */
-    transform: translate(-50%, -100%); /* Center the title */
-    opacity: 0; /* Initially hide the title */
-    transition: opacity 0.5s ease, background-color 0.5s ease; /* Smooth transition for opacity */
-    font-size: 32px; /* Adjust font size as needed */
-    background-color: rgb(0, 0, 0); /* Adjust the opacity of the background color */
-    padding: 5px 10px; /* Adjust padding as needed */
-    border-radius: 5px; /* Add rounded corners */
-    color: #004080; /* Darker blue text color */
-    z-index: 1; /* Ensure the title appears above the image */
 
+  /* Hide project image and title when project description is displayed */
+  .ProjectBoxClicked .ProjectImage,
+  .ProjectBoxClicked .ProjectTitle {
+    opacity: 0;
+    visibility: hidden;
   }
-  
+
+  /* Reduce font size of project title when hovered */
   .ProjectBox:hover .ProjectTitle {
-    opacity: 1; /* Show title when hovering over the project box */
+    font-size: 24px;
   }
-
-  .ProjectBox:not(:hover) .ProjectImage {
-    transition: transform 0.5s ease; /* Add transition for transform */
-  }
-
-  @media (max-width: 824px) {
-    .ProjectsContainer {
-      flex-direction: column; /* Display projects in a single column */
-      align-items: center; /* Center-align projects */
-    }
-  
-    .ProjectBox {
-      width: 95%; /* Adjust width to take up the entire width of the screen */
-    }
-  }
-  
+}

@@ -6,6 +6,7 @@
   padding: 10px 0;
   display: flex;
   justify-content: space-evenly;
+  z-index: 2;
   transition: transform 0.5s ease, bottom 0.5s ease; /* Add 'bottom' property to the transition */
 }
 
