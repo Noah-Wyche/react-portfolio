@@ -12,6 +12,17 @@
 
 }
 
+.ContactImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.ContactDescription {
+  color: #cc3333; /* Dark red text color */
+  padding: 10px 200px;
+}
+
 .ContactForm {
   display: flex;
   flex-direction: column;

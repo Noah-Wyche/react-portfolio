@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import Contactimage from '../assets/Images/contactBackground.jpg'
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -45,14 +46,17 @@ const Contact = () => {
   return (
     <div className="ContactContainer">
       <h1 className="ContactTitle">Contact</h1>
-      <p className="ContactDescription">
-        If you have any questions or would like to get in touch, please fill out the form below.
-      </p>
       <h2 className="SillyQuestion">Why would you want to get in touch with me?</h2>
       <p className="SillyAnswer">
         I'm a web developer, and I love to build cool stuff! If you have a project in mind, I'd love to help you bring it to life. Maybe you are a potential employer reviewing an application. Maybe you are just a friend playing around with my website. I welcome you all. Let's connect!
         </p>
+      <div className="ContactBar">
+          <img className="ContactImage" src={Contactimage} alt="Contact" />
+      </div>
       <h2 className="ContactSubtitle">Submit the form to send me a message!</h2>
+        <p className="ContactDescription">
+          If you have any questions or would like to get in touch, please fill out the form below.
+        </p>
       <form className="ContactForm" onSubmit={handleFormSubmit}>
         <div className="FormField">
           <label htmlFor="name">Name:</label>
