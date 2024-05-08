@@ -2,7 +2,7 @@ import './Contact.css';
 import Contactimage from '../assets/Images/contactBackground.jpg';
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const Contact = () => {
