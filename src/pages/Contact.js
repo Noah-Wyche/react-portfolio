@@ -48,17 +48,25 @@ export const Contact = () => {
   return (
   <div className="ContactContainer">
     <h1 className="ContactTitle">Contact</h1>
-    <div className="ContactBar">
-        <img className="ContactImage" src={Contactimage} alt="Contact" />
+    <div className='ContactBar'>
+       <ul className="ContactItems">
+        <li>NoahFleetwood1@gmail.com</li>
+        <li>(919) 895-2737</li>
+        <a href="https://www.linkedin.com/in/noah-fleetwood-3b9b6b1b3/"><li>LinkedIn</li></a>
+        <a href="https://github.com/Noah-Wyche"><li>GitHub</li></a>
+        <a href="https://www.instagram.com/noahfleetwood822/"><li>Instagram</li></a>
+        </ul> 
       </div>
+      <img className="ContactImage" src={Contactimage} alt="Contact" />
       <h2 className="ContactSubtitle">Submit the form to send me a message!</h2>
+      <p>Be sure to fill in all the boxes. You should recieve a confirmation email letting you know that the message was sent.</p>
     <form className='ContactForm' ref={form} onSubmit={sendEmail}>
       <label>Name</label>
-      <input type="text" name="user_name" required />
+      <input type="text" name="user_name" placeholder='Sabrina...' required />
       <label>Email</label>
-      <input type="email" name="user_email" required />
+      <input type="email" name="user_email" placeholder='sabrina@email.com...' required />
       <label>Message</label>
-      <textarea name="message" required />
+      <textarea name="message" placeholder='What up, Buttercup? Its me, Sabrina...' required />
       <input className="contactButton" type="submit" value="Send" />
     </form>
     </div>

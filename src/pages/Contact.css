@@ -6,6 +6,31 @@
   color: #990000; /* Darker red text color */
 }
 
+.ContactBar {
+  position: relative;
+}
+
+.ContactItems {
+  position: absolute;
+  top: calc(100% + 90px); /* Move the element down by the height of the image plus some extra spacing */
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.ContactItems li {
+  padding: 15px;
+  margin: 10px;
+  background-color: #8ca87c; /* to match header */
+  color: #fcf4e9;
+  border-radius: 5px;
+  font-size: 16px;
+  
+}
+
 .ContactImage {
   width: 100%;
   height: 300px;
@@ -60,6 +85,31 @@ textarea {
 }
 
 @media (max-width: 1024px) {
+  .ContactForm {
+    padding: 10px;
+  }
+
+  textarea {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .ContactItems {
+    flex-direction: column;
+    align-items: center;
+    top: calc(100% + 10px);
+  }
+
+  .ContactItems li {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .ContactDescription {
+    padding: 10px;
+  }
+
   .ContactForm {
     padding: 10px;
   }
