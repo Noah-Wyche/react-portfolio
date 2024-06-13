@@ -62,11 +62,11 @@ export const Contact = () => {
       <p>Be sure to fill in all the boxes. You should recieve a confirmation email letting you know that the message was sent.</p>
     <form className='ContactForm' ref={form} onSubmit={sendEmail}>
       <label>Name</label>
-      <input type="text" name="user_name" placeholder='Sabrina...' required />
+      <input type="text" name="user_name" placeholder='Jane Doe' required />
       <label>Email</label>
-      <input type="email" name="user_email" placeholder='sabrina@email.com...' required />
+      <input type="email" name="user_email" placeholder='janedoe@email.com' required />
       <label>Message</label>
-      <textarea name="message" placeholder='What up, Buttercup? Its me, Sabrina...' required />
+      <textarea name="message" placeholder='Type your message here, it will be sent as the body of your email...' required />
       <input className="contactButton" type="submit" value="Send" />
     </form>
     </div>
