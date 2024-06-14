@@ -32,8 +32,7 @@ const Footer = () => {
   return (
     <footer className={`Footer ${showFooter ? 'show' : ''}`}>
       <div className='footerContent'>
-        <a>NoahFleetwood</a>
-        <a>2024</a>
+        <p>&copy; 2023 Noah Fleetwood</p>
       </div>
     </footer>
   );
