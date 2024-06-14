@@ -31,9 +31,9 @@ const Footer = () => {
 
   return (
     <footer className={`Footer ${showFooter ? 'show' : ''}`}>
-      <div>
-        <a href="https://github.com/Noah-Wyche">GitHub</a>
-        <a href="https://linkedin.com/in/noah-fleetwood-3476a4195">LinkedIn</a>
+      <div className='footerContent'>
+        <a>NoahFleetwood</a>
+        <a>2024</a>
       </div>
     </footer>
   );

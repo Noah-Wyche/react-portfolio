@@ -21,6 +21,15 @@
   height: 40px;
   margin: 0 20px;
   transition: all 0.6s ease;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .Footer a:hover {
