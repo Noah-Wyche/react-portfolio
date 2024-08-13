@@ -7,7 +7,7 @@ const Resume = () => {
   return (
     <div className="ResumeContainer">
       <h1 className="ResumeTitle">Resume</h1>
-      <p className="ResumeContent"></p>
+      <p className="ResumeContent">My Proffesional Resume and my Coding Bootcamp Certication</p>
       <img src={Resumeimage} alt="Resume" className="resume-image" />
       <img src={Certificateimage} alt="Coding Certificate" className="certificate-image" />
     </div>

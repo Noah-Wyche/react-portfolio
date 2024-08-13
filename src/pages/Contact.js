@@ -55,6 +55,7 @@ export const Contact = () => {
         <a href="https://www.linkedin.com/in/noah-fleetwood-3b9b6b1b3/"><li>LinkedIn</li></a>
         <a href="https://github.com/Noah-Wyche"><li>GitHub</li></a>
         <a href="https://www.instagram.com/noahfleetwood822/"><li>Instagram</li></a>
+        <a href="https://www.tiktok.com/@noahfleetwood822"><li>TikTok</li></a>
         </ul> 
       </div>
       <img className="ContactImage" src={Contactimage} alt="Contact" />

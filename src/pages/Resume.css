@@ -2,8 +2,10 @@
     color: #753192; /* Match the purple color of the resume */
   }
   
-  .ResumeContent {
+  .ResumeContainer {
     color: #414b3b; /* Medium gray text color */
+    display: flex; /* Use flexbox to align elements */
+    flex-direction: column; /* Stack elements vertically */
   }
 
   .resume-image {
