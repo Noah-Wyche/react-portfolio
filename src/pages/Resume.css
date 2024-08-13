@@ -13,6 +13,11 @@
     height: auto;
   }
 
+  .certificate-image{
+    width: 100%;
+    height: auto;
+  }
+
   @media screen and (max-width: 1024px){
     .resume-image {
       width: 100%;
