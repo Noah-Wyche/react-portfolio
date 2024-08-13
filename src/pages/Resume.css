@@ -6,6 +6,9 @@
     color: #414b3b; /* Medium gray text color */
     display: flex; /* Use flexbox to align elements */
     flex-direction: column; /* Stack elements vertically */
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
   }
 
   .resume-image {
