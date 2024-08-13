@@ -6,7 +6,7 @@ import savorOfTheDayImage from '../assets/Images/savorOfTheDay.png';
 import weatherDashboardImage from '../assets/Images/weatherDashboard.png';
 import infoSymbolImage from '../assets/Images/infoSymbol2.png';
 import closeSymbolImage from '../assets/Images/closeSymbol.png';
-import CommonRoomImage from '../assets/Images/CommonRoom.png';
+import CommonRoomImage from '../assets/Images/CommonRoomImage.png';
 
 const Portfolio = () => {
   /* Project Setup */
