@@ -22,6 +22,10 @@
     height: auto;
   }
 
+  .CertificateContent {
+    margin-top: 50px;
+  }
+
   @media screen and (max-width: 1024px){
     .resume-image {
       width: 100%;
