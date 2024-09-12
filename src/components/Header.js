@@ -7,9 +7,6 @@ const Header = ({ activeSection, onNavClick }) => {
       <h1 className='Header'>Noah Fleetwood</h1>
       <nav className='navBar'>
         <ul>
-          <li className={activeSection === 'about' ? 'active' : ''}>
-            <button onClick={() => onNavClick('about')}>About Me</button>
-          </li>
           <li className={activeSection === 'portfolio' ? 'active' : ''}>
             <button onClick={() => onNavClick('portfolio')}>Portfolio</button>
           </li>
