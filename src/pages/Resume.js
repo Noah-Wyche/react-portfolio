@@ -1,6 +1,6 @@
 import React from 'react';
 import './Resume.css';
-import Resumeimage from '../assets/Images/Fleetwood-Resume.png'
+import Resumeimage from '../assets/Images/ResumeSeptember2024.png'
 import Certificateimage from '../assets/Images/codeCert.png'
 
 const Resume = () => {
