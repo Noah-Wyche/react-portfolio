@@ -77,6 +77,8 @@ const Portfolio = () => {
   return (
     <div className="PortfolioContainer">
       <h1 className="PortfolioTitle">Portfolio</h1>
+      <p className="PortfolioContent">Below are the projects I built during my bootcamp and since with descriptions able to be toggled on and off by clicking the blue 'i' icon in the top right of the project boxes.</p>
+      <p className="PortfolioContent">Click on the project image to be taken to the corresponding live site.</p>
       <div className="ProjectsContainer">
         {projects.map(project => (
           <div
@@ -111,6 +113,7 @@ const Portfolio = () => {
           </div>
         ))}
       </div>
+      <p className="PortfolioContent">Thank you so much for checking out my website and my previous projects. I am always working on the next project and everything leads back to this page.</p>
     </div>
   );
 };
