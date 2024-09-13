@@ -3,8 +3,8 @@
   }
   
   .ResumeContainer {
-    background-color: #414b3b;
-    color: #753192; /* Medium gray text color */
+    background-color: #ccc;
+    color: #8ca87c; /* Medium gray text color */
     display: flex; /* Use flexbox to align elements */
     flex-direction: column; /* Stack elements vertically */
     padding: 30px;
